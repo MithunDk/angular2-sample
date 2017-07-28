@@ -1,0 +1,35 @@
+<p>
+  directives works!
+</p>
+
+<h5>Property Binding</h5>
+<div [style.color]="'red'">styles added</div>
+<div [className]="myClassName">Style added</div>
+<div [ngClass]="myClassName">hikooo</div>
+<div [ngClass] ="['my-class']">bye </div>
+
+<div [ngStyle]="{'color': color, 'font-size': size+'px'}" >styles added using ngStyle</div>
+<input type="text" [(ngModel)]="color"/>
+
+<input type="button" (click)="size=size+1" value="++" />
+<input type="button" (click)="size=size-1" value="--" />
+
+<h5>Structural Directives</h5>
+
+<div [ngSwitch]="switchValue">
+  <div *ngSwitchCase="10">Display block for 10</div>
+  <div *ngSwitchCase="20">Display block for 20</div>
+  <div *ngSwitchCase="30">Display block for 10</div>
+  <div *ngSwitchDefault > Display blck for default </div>
+</div>
+
+<h4>Custom Directives</h4>
+<div [appHighlight]="'red'">custom attribute Directives</div>
+<div [appHighlight] [font]="'40px'"> directives coloring </div>
+<div > boyss </div>
+
+<h4>Custom Structural Directives</h4>
+<input type="checkbox" value="showThis" [(ngModel)]="showNow"/>
+<div *appMyIf="showNow">
+  The text is show for true value
+</div>

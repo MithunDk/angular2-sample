@@ -1,0 +1,22 @@
+<p>
+  todo works!
+</p>
+
+<input type="text" value="name" [(ngModel)]="names">
+<button type="button" (click)="add(names)" >Add</button><br/>
+{{resp | json}}
+
+<a [routerLink]="['edits',name]">Edits</a>
+<a [routerLink]="['dones']">Dones</a><br/>
+
+<ul>
+  <li *ngFor="let carts of tservice.todoList">
+  Your Entered value is {{carts.todoName}}
+    <input type="checkbox" [(ngModel)]="carts.done" >
+    {{carts.done}}
+  <!--your entered value is {{cart}}-->
+    <button  (click) = "deleteTodo(carts)">X</button>
+  </li>
+</ul>
+<router-outlet></router-outlet>
+

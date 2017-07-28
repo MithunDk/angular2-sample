@@ -1,0 +1,23 @@
+<h1>
+  {{title}}
+</h1>
+<!--{{getMass()}}-->
+<button type="button" (click)="getMass()">Trigger</button><br />
+{{boss}}
+<br />
+{{neutra}}<br /><br/>
+{{neutral}}<br/>
+<h4>Today's date is {{todayDate | date:"mm/dd/yy"}}</h4>
+
+
+<h4>{{'Arun' | salute : 'Ms.':' dear'}}</h4>
+<!--<app-todo></app-todo>-->
+<!--<app-directives></app-directives>-->
+<a [routerLink]="['home']"> home</a>
+<a [routerLink]="['todo']">Todo</a>
+<a [routerLink]="['directive']">Directives</a>
+<a [routerLink]="['editTodo',name]">Edit</a>
+<a [routerLink]="['doneTodo']">Done</a><br/>
+
+
+<router-outlet></router-outlet>
